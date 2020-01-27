@@ -94,7 +94,7 @@ angular.module('mgcrea.ngStrap.modal', ['mgcrea.ngStrap.core', 'mgcrea.ngStrap.h
         var compileData;
         var modalElement;
         var modalScope;
-        var backdropElement = angular.element('<div class="' + options.prefixClass + '-backdrop"/>');
+        var backdropElement = $modal.$backdropElement = angular.element('<div class="' + options.prefixClass + '-backdrop"/>');
         backdropElement.css({position: 'fixed', top: '0px', left: '0px', bottom: '0px', right: '0px'});
         promise.then(function (data) {
           compileData = data;
@@ -120,7 +120,7 @@ angular.module('mgcrea.ngStrap.modal', ['mgcrea.ngStrap.core', 'mgcrea.ngStrap.h
           // remove backdrop element
           if (backdropElement) {
             backdropElement.remove();
-            backdropElement = null;
+            backdropElement = $modal.$backdropElement = null;
           }
 
           // Destroy scope

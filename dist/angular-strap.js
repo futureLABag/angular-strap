@@ -2246,7 +2246,7 @@
         var compileData;
         var modalElement;
         var modalScope;
-        var backdropElement = angular.element('<div class="' + options.prefixClass + '-backdrop"/>');
+        var backdropElement = $modal.$backdropElement = angular.element('<div class="' + options.prefixClass + '-backdrop"/>');
         backdropElement.css({
           position: 'fixed',
           top: '0px',
@@ -2269,7 +2269,7 @@
           destroyModalElement();
           if (backdropElement) {
             backdropElement.remove();
-            backdropElement = null;
+            backdropElement = $modal.$backdropElement = null;
           }
           scope.$destroy();
         };
