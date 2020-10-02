@@ -2308,7 +2308,7 @@
             options.onBeforeShow($modal);
           }
           modalElement.css({
-            display: 'block'
+            display: ''
           }).addClass(options.placement);
           if (options.customClass) {
             modalElement.addClass(options.customClass);

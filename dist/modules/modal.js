@@ -135,7 +135,7 @@ angular.module('mgcrea.ngStrap.modal', [ 'mgcrea.ngStrap.core', 'mgcrea.ngStrap.
           options.onBeforeShow($modal);
         }
         modalElement.css({
-          display: 'block'
+          display: ''
         }).addClass(options.placement);
         if (options.customClass) {
           modalElement.addClass(options.customClass);

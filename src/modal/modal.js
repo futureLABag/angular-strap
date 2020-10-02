@@ -171,7 +171,7 @@ angular.module('mgcrea.ngStrap.modal', ['mgcrea.ngStrap.core', 'mgcrea.ngStrap.h
           }
 
           // Set the initial positioning.
-          modalElement.css({display: 'block'}).addClass(options.placement);
+          modalElement.css({display: ''}).addClass(options.placement);
 
           // Options: customClass
           if (options.customClass) {
